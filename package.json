@@ -1,6 +1,6 @@
-{
+﻿{
   "name": "dsh-context-fold",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Context folding and read-only health diagnostics for DeepSeek Harness sessions. Dry-run by default; backs up before replacing.",
   "type": "module",
   "main": "lib/index.js",
