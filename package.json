@@ -12,6 +12,7 @@
     "rules",
     "cordis.patch.yml",
     "README.md",
+    "THIRD_PARTY.md",
     "LICENSE"
   ],
   "engines": {

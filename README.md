@@ -208,6 +208,15 @@ npm test
 
 测试使用 `test/fake-session.mjs` 的纯内存会话，不读取真实会话文件。
 
+## Third-party / attribution
+
+See [THIRD_PARTY.md](THIRD_PARTY.md).
+
+- This repo vendors no third-party source code.
+- Runtime requires DeepSeek Harness / Cordis and Node.js; they are not bundled.
+- `dsh-session-recover` was used only as a development-time diagnostic tool and
+  is not a runtime dependency.
+
 ## License
 
 MIT
