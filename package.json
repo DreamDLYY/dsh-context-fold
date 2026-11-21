@@ -33,6 +33,14 @@
     "compaction",
     "session"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DreamDLYY/dsh-context-fold.git"
+  },
+  "homepage": "https://github.com/DreamDLYY/dsh-context-fold#readme",
+  "bugs": {
+    "url": "https://github.com/DreamDLYY/dsh-context-fold/issues"
+  },
   "author": "dsh-context-fold contributors",
   "license": "MIT",
   "private": false
