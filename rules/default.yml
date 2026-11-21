@@ -1,0 +1,22 @@
+rules:
+  - id: assistant-regex-clean
+    target: assistant-step
+    type: regex
+    match:
+      pattern: '^[\u4e00-\u9fff]。$'
+      flags: 'gm'
+      minMatches: 6
+    preserve:
+      reasoning: cleaned
+      tools: receipts
+    summaryReasoningChars: 0
+    action: fold
+
+  - id: user-duplicate
+    target: user-message
+    type: dedup
+    match:
+      minLen: 800
+    threshold: 0.95
+    keep: newest
+    action: fold

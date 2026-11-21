@@ -1,0 +1,36 @@
+rules:
+  - id: dedup-memory-snapshot
+    target: user-message
+    type: dedup
+    match:
+      source:
+        kind: dsh-mnemon
+        form: memory-snapshot
+      minLen: 800
+    threshold: 0.95
+    keep: newest
+    action: fold
+
+  - id: dedup-runtime-context
+    target: user-message
+    type: dedup
+    match:
+      source:
+        kind: runtime-context
+        form: snapshot
+      minLen: 200
+    threshold: 0.95
+    keep: newest
+    action: fold
+
+  - id: dedup-skill-catalog
+    target: user-message
+    type: dedup
+    match:
+      source:
+        kind: skill-catalog
+        form: catalog
+      minLen: 1000
+    threshold: 0.90
+    keep: newest
+    action: fold

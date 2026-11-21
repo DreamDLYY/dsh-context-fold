@@ -1,0 +1,32 @@
+- insert:
+    - id: context-fold
+      name: dsh-context-fold
+      config:
+        # 留空：用工具参数 sessionId 指定会话；不要在公开配置里写死个人 session id。
+        targetSession: ''
+        mode: 'dry-run'
+        backup:
+          # 相对路径按 DSH 进程的 cwd 解析；发布版请按 README 改成绝对路径。
+          dir: './context-fold-backups'
+          capBytes: 104857600
+          policy: 'rotate-oldest'
+          rotateGroups: 3
+          hook: null
+          notifyAfter: true
+        trigger:
+          # 默认关闭自动触发；只使用手动 context_fold 工具。
+          enabled: false
+          mode: 'array'
+          thresholds: []
+          combiner: 'threshold-rulefile'
+          # 发布版请按 README 改成插件目录下 rules 的绝对路径。
+          ruleDir: './rules'
+          defaultRuleFile: 'default.yml'
+          balanced:
+            start: 0.20
+            trick: 0.20
+          manual: true
+        preview:
+          requireApproval: true
+          autoApprove: false
+          maxMatches: 1000

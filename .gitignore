@@ -1,0 +1,9 @@
+node_modules/
+*.bak
+*.zstd
+*.log
+context-fold-backups/
+context-fold-plans/
+.env
+.DS_Store
+test/fixtures/*.real.jsonl
